@@ -633,10 +633,36 @@ body.retro-mode ::-webkit-scrollbar-thumb {
     .hero-subtitle {
         font-size: 1.2rem;
     }
+
+    /* Brand Logo Adjustments for Mobile */
+    .brand-logo {
+        font-size: 1rem; /* Slightly smaller on mobile */
+        margin-bottom: 0.5rem;
+        max-width: 80%; /* Prevent overlap with hamburger menu */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
     }
+}
+
+/* Brand Logo in Header */
+.brand-logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-right: 1rem;
+    white-space: nowrap;
+}
+
+body.retro-mode .brand-logo {
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid var(--text-color);
+    padding: 0.2rem 0.5rem;
+    background: var(--bg-color);
+    box-shadow: 2px 2px 0px var(--text-color);
 }
