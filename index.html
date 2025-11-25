@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-lang="home">Anasayfa</a></li>
+                <li><a href="about.html" data-lang="about">Hakkımda</a></li>
+                <li><a href="projects.html" data-lang="projects">Projeler</a></li>
+                <li><a href="gallery.html" data-lang="gallery">Galeri</a></li>
+                <li><a href="blog.html" data-lang="blog">Blog</a></li>
+                <li><a href="contact.html" data-lang="contact">İletişim</a></li>
+            </ul>
+        </nav>
+        <div class="controls">
+            <button id="theme-btn" data-lang="toggle_theme">Tema Değiştir</button>
+            <button id="style-btn" data-lang="toggle_style">Görünüm: Modern</button>
+            <button id="lang-btn" data-lang="toggle_lang">EN</button>
+        </div>
+    </header>
+
+    <canvas id="matrix-bg"></canvas>
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Ali Kemal</h1>
+            
+            <!-- Typewriter Effect -->
+            <h2 style="min-height: 1.5em; margin-bottom: 1rem;">
+                <span id="typewriter" class="hero-subtitle"></span><span class="cursor">|</span>
+            </h2>
+
+            <!-- Social Media Icons -->
+            <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1.5rem; justify-content: center;">
+                <a href="https://github.com/Nukte" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/ali-kemal-kara" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:alikemalkaraa0@gmail.com" target="_self" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p data-lang="footer_text">Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

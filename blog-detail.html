@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Detay</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-lang="home">Anasayfa</a></li>
+                <li><a href="about.html" data-lang="about">Hakkımda</a></li>
+                <li><a href="projects.html" data-lang="projects">Projeler</a></li>
+                <li><a href="gallery.html" data-lang="gallery">Galeri</a></li>
+                <li><a href="blog.html" data-lang="blog">Blog</a></li>
+                <li><a href="contact.html" data-lang="contact">İletişim</a></li>
+            </ul>
+        </nav>
+        <div class="controls">
+            <button id="theme-btn" data-lang="toggle_theme">Tema Değiştir</button>
+            <button id="style-btn" data-lang="toggle_style">Görünüm: Modern</button>
+            <button id="lang-btn" data-lang="toggle_lang">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="blog-detail-container" class="card" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+            <p>Yükleniyor...</p>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="blog.html" class="back-btn" data-lang="back_to_blog">← Blog'a Dön</a>
+        </div>
+    </main>
+
+    <footer>
+        <p data-lang="footer_text">Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

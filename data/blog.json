@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": {
+            "tr": "İlk Blog Yazım",
+            "en": "My First Blog Post"
+        },
+        "date": "2025-11-25",
+        "summary": {
+            "tr": "Bu benim ilk blog yazım. Web geliştirme serüvenime hoş geldiniz.",
+            "en": "This is my first blog post. Welcome to my web development journey."
+        },
+        "content": {
+            "tr": "<p>Bu benim ilk blog yazım. Web geliştirme serüvenime hoş geldiniz. Burada öğrendiğim her şeyi paylaşacağım.</p><p>HTML, CSS ve JavaScript ile başladığım bu yolda, ileride daha karmaşık projelere de imza atmayı planlıyorum.</p>",
+            "en": "<p>This is my first blog post. Welcome to my web development journey. I will share everything I learn here.</p><p>Starting with HTML, CSS, and JavaScript, I plan to undertake more complex projects in the future.</p>"
+        }
+    },
+    {
+        "id": 2,
+        "title": {
+            "tr": "HTML ve CSS İpuçları",
+            "en": "HTML and CSS Tips"
+        },
+        "date": "2025-11-26",
+        "summary": {
+            "tr": "Modern web tasarımında CSS değişkenleri kullanmak işinizi çok kolaylaştırır.",
+            "en": "Using CSS variables in modern web design makes your job much easier."
+        },
+        "content": {
+            "tr": "<p>Modern web tasarımında CSS değişkenleri kullanmak işinizi çok kolaylaştırır. Özellikle tema yönetimi (Dark/Light mode) yaparken vazgeçilmezdir.</p><p>Örneğin: <code>--primary-color: #007bff;</code> şeklinde bir tanım yaparak tüm sitedeki ana rengi tek yerden değiştirebilirsiniz.</p>",
+            "en": "<p>Using CSS variables in modern web design makes your job much easier. It is indispensable especially when managing themes (Dark/Light mode).</p><p>For example, by defining <code>--primary-color: #007bff;</code>, you can change the main color of the entire site from a single place.</p>"
+        }
+    },
+    {
+        "id": 3,
+        "title": {
+            "tr": "JavaScript ile Etkileşim",
+            "en": "Interaction with JavaScript"
+        },
+        "date": "2025-11-27",
+        "summary": {
+            "tr": "Vanilla JS kullanarak harika etkileşimler oluşturabilirsiniz.",
+            "en": "You can create amazing interactions using Vanilla JS."
+        },
+        "content": {
+            "tr": "<p>Vanilla JS kullanarak harika etkileşimler oluşturabilirsiniz. Framework kullanmadan da DOM manipülasyonu, olay dinleyicileri ve asenkron işlemler (Fetch API) ile güçlü uygulamalar yazabilirsiniz.</p><p>Bu sitede gördüğünüz tema değiştirme ve dil seçenekleri tamamen saf JavaScript ile yapılmıştır.</p>",
+            "en": "<p>You can create amazing interactions using Vanilla JS. You can write powerful applications with DOM manipulation, event listeners, and asynchronous operations (Fetch API) without using a framework.</p><p>The theme switching and language options you see on this site are made entirely with pure JavaScript.</p>"
+        }
+    }
+]

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-lang="home">Anasayfa</a></li>
+                <li><a href="about.html" data-lang="about">Hakkımda</a></li>
+                <li><a href="projects.html" data-lang="projects">Projeler</a></li>
+                <li><a href="gallery.html" data-lang="gallery">Galeri</a></li>
+                <li><a href="blog.html" data-lang="blog">Blog</a></li>
+                <li><a href="contact.html" data-lang="contact">İletişim</a></li>
+            </ul>
+        </nav>
+        <div class="controls">
+            <button id="theme-btn" data-lang="toggle_theme">Tema Değiştir</button>
+            <button id="style-btn" data-lang="toggle_style">Görünüm: Modern</button>
+            <button id="lang-btn" data-lang="toggle_lang">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <h1 data-lang="gallery_title">Galeri</h1>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/images/WhatsApp Görsel 2025-09-21 saat 16.52.37_1b752342.jpg" alt="Coding" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/WhatsApp Görsel 2025-09-21 saat 16.53.04_7d631d58.jpg" alt="Workspace" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/WhatsApp Görsel 2025-09-21 saat 16.53.21_8ceaedcc.jpg" alt="Code" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" alt="Laptop" class="gallery-img">
+            </div>
+             <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=600&q=80" alt="Programming" class="gallery-img">
+            </div>
+             <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&q=80" alt="Python" class="gallery-img">
+            </div>
+        </div>
+    </main>
+
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="caption"></span>
+                <span class="close" data-lang="modal_close">&times;</span>
+            </div>
+            <img class="modal-img" id="img01">
+        </div>
+    </div>
+
+    <footer>
+        <p data-lang="footer_text">Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

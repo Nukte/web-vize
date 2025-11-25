@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-lang="home">Anasayfa</a></li>
+                <li><a href="about.html" data-lang="about">Hakkımda</a></li>
+                <li><a href="projects.html" data-lang="projects">Projeler</a></li>
+                <li><a href="gallery.html" data-lang="gallery">Galeri</a></li>
+                <li><a href="blog.html" data-lang="blog">Blog</a></li>
+                <li><a href="contact.html" data-lang="contact">İletişim</a></li>
+            </ul>
+        </nav>
+        <div class="controls">
+            <button id="theme-btn" data-lang="toggle_theme">Tema Değiştir</button>
+            <button id="style-btn" data-lang="toggle_style">Görünüm: Modern</button>
+            <button id="lang-btn" data-lang="toggle_lang">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <h1 data-lang="about_title">Hakkımda</h1>
+        
+        <div class="card" style="margin-bottom: 2rem;">
+            <h2 data-lang="personal_intro_title" style="margin-bottom: 1rem; color: var(--primary-color);">Kişisel Tanıtım</h2>
+            <p data-lang="personal_intro_text">
+                Merhaba! Ben Ali Kemal Kara. Tuzla Meslek Lisesi'nde yazılım bölümü okudum ve şu anda Akdeniz Üniversitesi'nde Bilgisayar Programcılığı bölümünde eğitimime devam ediyorum. Yazılım geliştirme alanında kendimi sürekli geliştirmeye odaklı bir öğrenciyim.
+            </p>
+        </div>
+
+        <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card">
+                <h2 data-lang="experience_title" style="margin-bottom: 1rem; color: var(--primary-color);">İş Deneyimi</h2>
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.2rem;">Software Developer Intern</h3>
+                    <p style="font-weight: bold; color: var(--secondary-color);">NETAŞ</p>
+                    <small>10 Ay</small>
+                    <p data-lang="experience_text" style="margin-top: 0.5rem;">
+                        NETAŞ'ta 10 ay boyunca Software Developer Intern olarak çalıştım. Bu süreçte yazılım geliştirme süreçlerini öğrendim, takım çalışması deneyimi kazandım ve profesyonel iş ortamında projeler geliştirdim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 data-lang="education_title" style="margin-bottom: 1rem; color: var(--primary-color);">Eğitim</h2>
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.2rem;">Akdeniz Üniversitesi</h3>
+                    <p style="color: var(--secondary-color);">Bilgisayar Programcılığı</p>
+                    <small data-lang="education_ongoing">Devam Ediyor</small>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.2rem;">Tuzla Meslek Lisesi</h3>
+                    <p style="color: var(--secondary-color);">Yazılım Bölümü</p>
+                    <small data-lang="education_graduated">Mezun</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 data-lang="skills_title" style="margin-bottom: 1rem; color: var(--primary-color);">Kullandığım Teknolojiler</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">.NET Core / ASP.NET</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p data-lang="footer_text">Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

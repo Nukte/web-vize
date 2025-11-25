@@ -1,0 +1,642 @@
+:root {
+    /* Base Colors - Light Mode (Default) */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --border-color: #dddddd;
+    --card-bg: #f8f9fa;
+    
+    /* Modern Style Tokens (Default) */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --border-style: solid;
+    --border-width: 1px;
+    --modal-overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #bb86fc;
+    --secondary-color: #a0a0a0;
+    --border-color: #333333;
+    --card-bg: #1e1e1e;
+    --box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+/* Retro Mode Overrides */
+body.retro-mode {
+    --font-family: 'Times New Roman', Times, serif;
+    --border-radius: 0px;
+    --box-shadow: 4px 4px 0px #000000;
+    --border-style: solid;
+    --border-width: 2px;
+    --bg-color: #c0c0c0; /* Classic Windows Gray */
+    --text-color: #000000;
+    --card-bg: #ffffff;
+    --primary-color: #000080; /* Navy Blue */
+    --border-color: #000000;
+}
+
+body.retro-mode.dark-mode {
+    --bg-color: #000000; /* Terminal Black */
+    --text-color: #00ff00; /* Terminal Green */
+    --card-bg: #111111;
+    --primary-color: #00ff00;
+    --border-color: #00ff00;
+    --box-shadow: 4px 4px 0px #004400;
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+/* Layout */
+header {
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    border-bottom: var(--border-width) var(--border-style) var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Modern Header Styles (Default) */
+header:not(.retro-header) {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8); /* Light mode default */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    border-bottom: none;
+}
+
+body.dark-mode header:not(.retro-header) {
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Modern Nav Hover */
+body:not(.retro-mode) nav a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.controls {
+    display: flex;
+    gap: 0.8rem;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+body:not(.retro-mode) button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+/* Retro Mode Header Overrides */
+body.retro-mode header {
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+}
+
+body.retro-mode nav ul {
+    gap: 0;
+}
+
+body.retro-mode nav a {
+    border-radius: 0;
+    border: 2px solid transparent;
+    margin-right: 2px;
+}
+
+body.retro-mode nav a:hover {
+    background-color: #000080;
+    color: #fff;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: none;
+    box-shadow: none;
+}
+
+body.retro-mode button {
+    border-radius: 0;
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    box-shadow: none;
+}
+
+body.retro-mode button:active {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translate(1px, 1px);
+}
+
+/* Retro Dark Mode (Terminal Style) */
+body.retro-mode.dark-mode header {
+    background-color: #000;
+    border: 2px solid #00ff00;
+}
+
+body.retro-mode.dark-mode nav a:hover {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+}
+
+body.retro-mode.dark-mode button {
+    background-color: #000;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+}
+
+body.retro-mode.dark-mode button:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-top: var(--border-width) var(--border-style) var(--border-color);
+    margin-top: 2rem;
+}
+
+/* Grid Layout for Projects and Gallery */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--border-radius) / 2);
+    display: block;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+/* Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    background: var(--card-bg);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    display: block;
+}
+
+/* Modern Hover Effect */
+body:not(.retro-mode) .gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Retro Mode Gallery */
+body.retro-mode .gallery-item {
+    border: 3px solid var(--text-color);
+    box-shadow: 6px 6px 0px var(--text-color);
+    border-radius: 0;
+}
+
+body.retro-mode .gallery-item:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0px var(--text-color);
+}
+
+body.retro-mode .gallery-item img {
+    filter: grayscale(100%) sepia(20%);
+}
+
+body.retro-mode .gallery-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: var(--modal-overlay);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: auto;
+    padding: 20px;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.close {
+    color: var(--secondary-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Retro Modal Styles */
+body.retro-mode .modal-content {
+    border: 3px solid #000;
+    box-shadow: 8px 8px 0px #000;
+    background-color: #c0c0c0; /* Windows 95 Gray */
+    padding: 2px; /* Tight padding like a window */
+}
+
+body.retro-mode.dark-mode .modal-content {
+    background-color: #000;
+    border: 3px solid #00ff00;
+    box-shadow: 8px 8px 0px #004400;
+}
+
+body.retro-mode .modal-header {
+    background: #000080; /* Title bar blue */
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+body.retro-mode.dark-mode .modal-header {
+    background: #004400;
+    color: #00ff00;
+}
+
+body.retro-mode .close {
+    position: static;
+    background: #c0c0c0;
+    color: black;
+    border: 2px outset #fff;
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    line-height: 16px;
+    text-align: center;
+}
+
+body.retro-mode.dark-mode .close {
+    background: #000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+/* Matrix Background */
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 1; /* Increased visibility */
+    transition: opacity 0.9s ease;
+}
+
+body.dark-mode #matrix-bg {
+    opacity: 0.9; /* Increased visibility in dark mode */
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    border: var(--border-width) var(--border-style) transparent;
+}
+
+body.dark-mode .hero-content {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Retro Mode Hero Overrides */
+body.retro-mode .hero-content {
+    background-color: var(--card-bg);
+    border: 2px solid #000;
+    box-shadow: 8px 8px 0px #000;
+    backdrop-filter: none;
+}
+
+body.retro-mode .hero-title {
+    background: none;
+    -webkit-text-fill-color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--text-color);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+body.retro-mode .hero-subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 1rem;
+}
+
+body.retro-mode.dark-mode .hero-content {
+    border-color: #00ff00;
+    box-shadow: 8px 8px 0px #004400;
+}
+
+/* Skill Tags */
+.skill-tag {
+    background-color: var(--bg-color);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+body.retro-mode .skill-tag {
+    border-radius: 0;
+    border: 2px solid var(--text-color);
+    background-color: var(--card-bg);
+}
+
+/* Sosyal İkonlar */
+.social-icon {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* Yanıp Sönen İmleç */
+.cursor {
+    animation: blink 1s infinite;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- ÖZEL SCROLLBAR --- */
+
+/* Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color); 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color); 
+}
+
+/* Retro Mod İçin Scrollbar */
+body.retro-mode ::-webkit-scrollbar {
+    width: 16px;
+}
+
+body.retro-mode ::-webkit-scrollbar-track {
+    background: #c0c0c0;
+    border-left: 1px solid #fff;
+}
+
+body.retro-mode ::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border: 2px outset #fff;
+    border-radius: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 1rem;
+        display: none; /* Hidden by default on mobile */
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    .controls {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .controls button {
+        flex: 1;
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    /* Hamburger Menu Button */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        z-index: 1001;
+    }
+    
+    /* Hero Section Adjustments */
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}

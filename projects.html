@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-lang="home">Anasayfa</a></li>
+                <li><a href="about.html" data-lang="about">Hakkımda</a></li>
+                <li><a href="projects.html" data-lang="projects">Projeler</a></li>
+                <li><a href="gallery.html" data-lang="gallery">Galeri</a></li>
+                <li><a href="blog.html" data-lang="blog">Blog</a></li>
+                <li><a href="contact.html" data-lang="contact">İletişim</a></li>
+            </ul>
+        </nav>
+        <div class="controls">
+            <button id="theme-btn" data-lang="toggle_theme">Tema Değiştir</button>
+            <button id="style-btn" data-lang="toggle_style">Görünüm: Modern</button>
+            <button id="lang-btn" data-lang="toggle_lang">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <h1 data-lang="projects_title">Projelerim</h1>
+        <div id="projects-container" class="grid-container">
+            <p>Projeler GitHub'dan yükleniyor...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p data-lang="footer_text">Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
