@@ -32,7 +32,146 @@
         <div id="projects-container" class="grid-container">
             <p>Projeler GitHub'dan yükleniyor...</p>
         </div>
+
+        <h2 data-lang="photoshop_projects_title" style="margin-top: 50px; text-align: center;">Photoshop Projeleri</h2>
+        <div class="photoshop-grid">
+            <!-- Card 1: Image Stack -->
+            <div class="photoshop-card" onclick="openModal('modal-imagestack')">
+                <div class="card-image">
+                    <img src="assets/projectImages/image-stack-projesi/proje1-sonrası.png" alt="Image Stack Projesi">
+                </div>
+                <div class="card-info">
+                    <h3>Image Stack Projesi</h3>
+                    <p>Detaylar için tıklayın</p>
+                </div>
+            </div>
+
+            <!-- Card 2: History Brush -->
+            <div class="photoshop-card" onclick="openModal('modal-historybrush')">
+                <div class="card-image">
+                    <img src="assets/projectImages/history-brush-projesi/proje2-sonrasi.png" alt="History Brush Projesi">
+                </div>
+                <div class="card-info">
+                    <h3>History Brush Projesi</h3>
+                    <p>Detaylar için tıklayın</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Ürün Tanıtımı (Shoes) -->
+            <div class="photoshop-card" onclick="openModal('modal-shoes')">
+                <div class="card-image">
+                    <img src="assets/projectImages/urun-tanitimi-projesi/Proje3-sonrası.jpg" alt="Ürün Tanıtımı">
+                </div>
+                <div class="card-info">
+                    <h3>Ürün Tanıtımı</h3>
+                    <p>Detaylar için tıklayın</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Karakalem Boyama -->
+            <div class="photoshop-card" onclick="openModal('modal-karakalem')">
+                <div class="card-image">
+                    <img src="assets/projectImages/karakalem-boyama-projesi/Project4-Sonrasi.jpg" alt="Karakalem Boyama">
+                </div>
+                <div class="card-info">
+                    <h3>Karakalem Boyama</h3>
+                    <p>Detaylar için tıklayın</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Smart Object -->
+            <div class="photoshop-card" onclick="openModal('modal-smartobject')">
+                <div class="card-image">
+                    <img src="assets/projectImages/smart-object-projesi/smart-object-sonrasi.jpg" alt="Smart Object Projesi">
+                </div>
+                <div class="card-info">
+                    <h3>Smart Object Projesi</h3>
+                    <p>Detaylar için tıklayın</p>
+                </div>
+            </div>
+
+            <!-- Card 6: Web Arayüz Tasarımı -->
+            <div class="photoshop-card" onclick="openModal('modal-webdesign')">
+                <div class="card-image">
+                    <img src="assets/projectImages/Web-arayuz-tasarımı-projesi/Tasarım1.jpg" alt="Web Arayüz Tasarımı">
+                </div>
+                <div class="card-info">
+                    <h3>Web Arayüz Tasarımı</h3>
+                    <p>Detaylar için tıklayın</p>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- Modals -->
+    <div id="modal-imagestack" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-imagestack')">&times;</span>
+            <h2>Image Stack Projesi</h2>
+            <div class="modal-images">
+                <img src="assets/projectImages/image-stack-projesi/proje1-sonrası.png" alt="Sonrası" style="width:100%; max-width:600px; margin: 10px 0; border-radius: 8px;">
+            </div>
+            <p>Image Stack tekniği kullanılarak yapılan çalışma.</p>
+        </div>
+    </div>
+
+    <div id="modal-historybrush" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-historybrush')">&times;</span>
+            <h2>History Brush Projesi</h2>
+            <div class="modal-images">
+                <img src="assets/projectImages/history-brush-projesi/proje2-sonrasi.png" alt="Sonrası" style="width:100%; max-width:600px; margin: 10px 0; border-radius: 8px;">
+            </div>
+            <p>History Brush aracı ile yapılan sanatsal çalışma.</p>
+        </div>
+    </div>
+
+    <div id="modal-shoes" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-shoes')">&times;</span>
+            <h2>Ürün Tanıtımı</h2>
+            <div class="modal-images">
+                <img src="assets/projectImages/urun-tanitimi-projesi/Proje3-sonrası.jpg" alt="Sonrası" style="width:100%; max-width:600px; margin: 10px 0; border-radius: 8px;">
+            </div>
+            <p>Ürün tanıtımı ve manipülasyon çalışması.</p>
+        </div>
+    </div>
+
+    <div id="modal-karakalem" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-karakalem')">&times;</span>
+            <h2>Karakalem Boyama</h2>
+            <div class="modal-images">
+                <img src="assets/projectImages/karakalem-boyama-projesi/Project4-Sonrasi.jpg" alt="Sonrası" style="width:100%; max-width:600px; margin: 10px 0; border-radius: 8px;">
+            </div>
+            <p>Dijital boyama ve karakalem efekti çalışması.</p>
+        </div>
+    </div>
+
+    <div id="modal-smartobject" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-smartobject')">&times;</span>
+            <h2>Smart Object Projesi</h2>
+            <div class="modal-images">
+                <img src="assets/projectImages/smart-object-projesi/smart-object-sonrasi.jpg" alt="Sonrası" style="width:100%; max-width:600px; margin: 10px 0; border-radius: 8px;">
+            </div>
+            <p>Smart Object kullanılarak yapılan esnek düzenleme çalışması.</p>
+        </div>
+    </div>
+
+    <div id="modal-webdesign" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-webdesign')">&times;</span>
+            <h2>Web Arayüz Tasarımı</h2>
+            <div class="modal-images">
+                <img src="assets/projectImages/Web-arayuz-tasarımı-projesi/Tasarım1.jpg" alt="Tasarım 1" style="width:100%; max-width:600px; margin: 10px 0; border-radius: 8px;">
+                <img src="assets/projectImages/Web-arayuz-tasarımı-projesi/web-arayüz-taslak-çizim.png" alt="Wireframe" style="width:100%; max-width:600px; margin: 10px 0; border-radius: 8px;">
+            </div>
+            <p>Web sitesi arayüz tasarımı ve wireframe çalışması.</p>
+        </div>
+    </div>
+
+
 
     <footer>
         <p data-lang="footer_text">Tüm hakları saklıdır.</p>

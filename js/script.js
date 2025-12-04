@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typewriter Effect
     const typeWriterElement = document.getElementById('typewriter');
     if (typeWriterElement) {
-        const texts = [".NET Developer", "Software Engineer", "Student"]; 
+        const texts = [".NET Developer", "Software Developer", "Student"]; 
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -385,3 +385,26 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(type, 1000);
     }
 });
+
+// Modal Functions
+window.openModal = function(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+    }
+}
+
+window.closeModal = function(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+});
+

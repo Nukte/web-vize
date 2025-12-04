@@ -37,7 +37,8 @@ const translations = {
         education_title: "Eğitim",
         education_ongoing: "Devam Ediyor",
         education_graduated: "Mezun",
-        skills_title: "Kullandığım Teknolojiler"
+        skills_title: "Kullandığım Teknolojiler",
+        photoshop_projects_title: "Photoshop Projeleri"
     },
     en: {
         home: "Home",
@@ -77,6 +78,7 @@ const translations = {
         education_title: "Education",
         education_ongoing: "Ongoing",
         education_graduated: "Graduated",
-        skills_title: "Technologies Used"
+        skills_title: "Technologies Used",
+        photoshop_projects_title: "Photoshop Projects"
     }
 };
