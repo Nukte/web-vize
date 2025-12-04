@@ -38,7 +38,12 @@ const translations = {
         education_ongoing: "Devam Ediyor",
         education_graduated: "Mezun",
         skills_title: "Kullandığım Teknolojiler",
-        photoshop_projects_title: "Photoshop Projeleri"
+        photoshop_projects_title: "Photoshop Projeleri",
+        latest_projects: "Son Projeler",
+        gallery_preview: "Galeri Önizleme",
+        read_more: "Devamını Oku",
+        view_all_projects: "Tüm Projeleri Gör",
+        view_gallery: "Galeriyi Görüntüle"
     },
     en: {
         home: "Home",
@@ -79,6 +84,11 @@ const translations = {
         education_ongoing: "Ongoing",
         education_graduated: "Graduated",
         skills_title: "Technologies Used",
-        photoshop_projects_title: "Photoshop Projects"
+        photoshop_projects_title: "Photoshop Projects",
+        latest_projects: "Latest Projects",
+        gallery_preview: "Gallery Preview",
+        read_more: "Read More",
+        view_all_projects: "View All Projects",
+        view_gallery: "View Gallery"
     }
 };

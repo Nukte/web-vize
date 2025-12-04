@@ -28,22 +28,88 @@
     </header>
 
     <canvas id="matrix-bg"></canvas>
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Ali Kemal</h1>
-            
-            <!-- Typewriter Effect -->
-            <h2 style="min-height: 1.5em; margin-bottom: 1rem;">
-                <span id="typewriter" class="hero-subtitle"></span><span class="cursor">|</span>
-            </h2>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Ali Kemal</h1>
+                
+                <!-- Typewriter Effect -->
+                <h2 style="min-height: 1.5em; margin-bottom: 1rem;">
+                    <span id="typewriter" class="hero-subtitle"></span><span class="cursor">|</span>
+                </h2>
 
-            <!-- Social Media Icons -->
-            <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1.5rem; justify-content: center;">
-                <a href="https://github.com/Nukte" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/ali-kemal-kara" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:alikemalkaraa0@gmail.com" target="_self" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <!-- Social Media Icons -->
+                <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1.5rem; justify-content: center;">
+                    <a href="https://github.com/Nukte" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ali-kemal-kara" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:alikemalkaraa0@gmail.com" target="_self" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="home-section container">
+            <h2 data-lang="about_title">Hakkımda</h2>
+            <div class="home-about-content">
+                <p data-lang="personal_intro_text">
+                    Merhaba! Ben Ali Kemal Kara. Tuzla Meslek Lisesi'nde yazılım bölümü okudum ve şu anda Akdeniz Üniversitesi'nde Bilgisayar Programcılığı bölümünde eğitimime devam ediyorum. Yazılım geliştirme alanında kendimi sürekli geliştirmeye odaklı bir öğrenciyim.
+                </p>
+                <a href="about.html" class="btn-primary" data-lang="read_more">Devamını Oku</a>
+            </div>
+        </section>
+
+        <!-- Projects Preview -->
+        <section class="home-section container">
+            <h2 data-lang="latest_projects">Son Projeler</h2>
+            <div class="photoshop-grid">
+                <!-- Card 1 -->
+                <div class="photoshop-card" onclick="location.href='projects.html'">
+                    <div class="card-image">
+                        <img src="assets/projectImages/image-stack-projesi/proje1-sonrası.png" alt="Image Stack">
+                    </div>
+                    <div class="card-info">
+                        <h3>Image Stack</h3>
+                        <p>Photoshop çalışması</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="photoshop-card" onclick="location.href='projects.html'">
+                    <div class="card-image">
+                        <img src="assets/projectImages/history-brush-projesi/proje2-sonrasi.png" alt="History Brush">
+                    </div>
+                    <div class="card-info">
+                        <h3>History Brush</h3>
+                        <p>Sanatsal çalışma</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="photoshop-card" onclick="location.href='projects.html'">
+                    <div class="card-image">
+                        <img src="assets/projectImages/urun-tanitimi-projesi/Proje3-sonrası.jpg" alt="Ürün Tanıtımı">
+                    </div>
+                    <div class="card-info">
+                        <h3>Ürün Tanıtımı</h3>
+                        <p>Manipülasyon çalışması</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="projects.html" class="btn-primary" data-lang="view_all_projects">Tüm Projeleri Gör</a>
+            </div>
+        </section>
+
+        <!-- Gallery Preview -->
+        <section class="home-section container">
+            <h2 data-lang="gallery_preview">Galeri Önizleme</h2>
+            <div class="home-gallery-preview">
+                <img src="assets/images/WhatsApp Görsel 2025-09-21 saat 16.52.37_1b752342.jpg" alt="Gallery 1">
+                <img src="assets/images/WhatsApp Görsel 2025-09-21 saat 16.53.04_7d631d58.jpg" alt="Gallery 2">
+                <img src="assets/images/WhatsApp Görsel 2025-09-21 saat 16.53.21_8ceaedcc.jpg" alt="Gallery 3">
+            </div>
+            <div style="text-align: center;">
+                <a href="gallery.html" class="btn-primary" data-lang="view_gallery">Galeriyi Görüntüle</a>
+            </div>
+        </section>
     </main>
 
     <footer>
