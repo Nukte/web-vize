@@ -43,7 +43,11 @@ const translations = {
         gallery_preview: "Galeri Önizleme",
         read_more: "Devamını Oku",
         view_all_projects: "Tüm Projeleri Gör",
-        view_gallery: "Galeriyi Görüntüle"
+        view_gallery: "Galeriyi Görüntüle",
+        address_title: "Adres",
+        phone_title: "Telefon",
+        address_text: "Akdeniz Üniversitesi, Antalya, Türkiye",
+        phone_text: "+90 555 555 55 55"
     },
     en: {
         home: "Home",
@@ -89,6 +93,10 @@ const translations = {
         gallery_preview: "Gallery Preview",
         read_more: "Read More",
         view_all_projects: "View All Projects",
-        view_gallery: "View Gallery"
+        view_gallery: "View Gallery",
+        address_title: "Address",
+        phone_title: "Phone",
+        address_text: "Akdeniz University, Antalya, Turkey",
+        phone_text: "+90 555 555 55 55"
     }
 };
